@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Booker</title>
+    <link rel="stylesheet" href="static/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="../static/imagenes/logo.jpg" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobrenosotros">Sobre Nosotros</a>
+            <a href="#carta">Carta</a>
+            <a href="#productos">Productos</a>
+            <a href="#review" class="active">Opiniones</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#blog">Blog</a>
+        </nav>
+
+        <div class="iconos">
+            <div class="fas fa-search" id="buscar-btn"></div>
+            <div class="carrito-icono">
+                <div class="fas fa-shopping-cart" id="carrito-btn"></div>
+                <span class="carrito-count">0</span>
+            </div>
+            <div class="fas fa-user" id="login-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="buscar-formulario">
+            <input type="search" id="buscar-box" placeholder="Buscar...">
+            <label for="buscar-box" class="fas fa-search"></label>
+        </div>
+        <div class="carta-items-contenedor">
+
+            <a href="#" class="btn">Pagar ahora</a>
+        </div>
+    </header>
+    <div class="login-container" id="login-modal">
+        <div class="form-container">
+            <p class="title">Iniciar Sesión</p>
+            <form class="form">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" name="username" id="username" placeholder="Ingresa tu usuario">
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña">
+                    <div class="forgot">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+                <button class="sign">Entrar</button>
+            </form>
+
+            <div class="social-message">
+                <div class="line"></div>
+                <p class="message">O entra con</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="login-social-icons">
+                <!-- Google -->
+                <a href="https://www.google.com" target="_blank" class="footer-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+
+                <!-- X (antes Twitter) -->
+                <a href="https://www.x.com" target="_blank" class="footer-icon">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/tu-usuario" target="_blank" class="footer-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+            <p class="signup">¿No tienes cuenta?
+                <a href="#">Regístrate</a>
+            </p>
+        </div>
+
+    </div>
+
+    <section class="inicio" id="inicio">
+        <div class="contenido">
+            <h3>Donde la música, los tragos y la buena compañía se encuentran</h3>
+            <p>Vive la mejor experiencia con nuestros tragos, música en vivo y un ambiente pensado para disfrutar con
+                amigos y familia.</p>
+            <a href="#productos" class="btn">Haz tu pedido</a>
+        </div>
+    </section>
+
+    <section class="sobre-nosotros" id="sobrenosotros">
+        <h1 class="titulo">Sobre <span>Nosotros</span></h1>
+        <div class="fila">
+            <div class="imagen">
+                <img src="../static/imagenes/sobNos.jpg" alt="">
+            </div>
+            <div class="contenido">
+                <h3>¿Que hace especial a nuestro bar?</h3>
+                <p>En The Booker creemos que cada visita es una experiencia única. Combinamos un ambiente acogedor,
+                    música en vivo y una cuidada selección de bebidas para que nuestros clientes se sientan como en casa
+                    mientras disfrutan de momentos memorables.</p>
+                <p>Nos destacamos por la atención personalizada, la creatividad en nuestros cócteles y la pasión por
+                    ofrecer un espacio donde la buena compañía y la diversión se encuentran. Cada detalle está pensado
+                    para que cada visita sea una celebración de sabor, música y amistad.</p>
+                <a href="#" class="btn">Leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="carta">
+        <h1 class="titulo">Carta de <span>la barra</span></h1>
+        <div class="box-contenedor">
+            <div class="box">
+                <img src="../static/imagenes/michelada-1.jpg" alt="">
+                <h3>Michelada Clásica</h3>
+                <div class="precio">$14.400 <span>18.400</span></div>
+                <a href="#" data-nombre="Michelada Clásica" data-precio="14400"
+                    data-img="../static/imagenes/michelada-1.jpg" class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/michelada-2.jpg" alt="">
+                <h3>Cóctel Frutos Rojos y Naranjas</h3>
+                <div class="precio">$22.400 <span>28.000</span></div>
+                <a href="#" data-nombre="Cóctel Frutos Rojos" data-precio="22400"
+                    data-img="../static/imagenes/michelada-2.jpg" class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/michelada-3.jpg" alt="">
+                <h3>Mojito Tropical</h3>
+                <div class="precio">$16.500 <span>20.000</span></div>
+                <a href="#" data-nombre="Mojito Tropical" data-precio="16500"
+                    data-img="../static/imagenes/michelada-3.jpg" class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/cerveza.jpg" alt="">
+                <h3>Cerveza Lager</h3>
+                <div class="precio">$13.500 <span>17.000</span></div>
+                <a href="#" data-nombre="Cerveza Lager" data-precio="13500" data-img="../static/imagenes/cerveza.jpg"
+                    class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/michelada-5.jpg" alt="">
+                <h3>Whisky en las Rocas</h3>
+                <div class="precio">$42.000 <span>58.000</span></div>
+                <a href="#" data-nombre="Whisky en las Rocas" data-precio="42000"
+                    data-img="../static/imagenes/michelada-5.jpg" class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/cerveza-2.jpg" alt="">
+                <h3>Cerveza Artesanal IPA</h3>
+                <div class="precio">$12.500 <span>16.000</span></div>
+                <a href="#" data-nombre="Cerveza Artesanal IPA" data-precio="12500"
+                    data-img="../static/imagenes/cerveza-2.jpg" class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/cerveza-3.jpg" alt="">
+                <h3>Cerveza Rubia</h3>
+                <div class="precio">$14.000 <span>18.000</span></div>
+                <a href="#" data-nombre="Cerveza Rubia" data-precio="14000" data-img="../static/imagenes/cerveza-3.jpg"
+                    class="btn agregar-carrito">Agregar al carrito</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="productos" id="productos">
+        <h1 class="titulo">Nuestros <span>productos</span></h1>
+        <div class="box-contenedor">
+            <div class="box">
+                <div class="iconos">
+                    <a href="#" class="fas fa-shopping-cart agregar-carrito" data-nombre="Blue Label"
+                        data-precio="185000" data-img="../static/imagenes/BlueLabel.png"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="imagen">
+                    <img src="../static/imagenes/BlueLabel.png" alt="">
+                </div>
+                <div class="contenido">
+                    <h3>Blue Label</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="precio">$185.000 <span>220.000</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconos">
+                    <a href="#" class="fas fa-shopping-cart agregar-carrito" data-nombre="Sixpack Corona"
+                        data-precio="35000" data-img="../static/imagenes/CoronaSix.png"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="imagen">
+                    <img src="../static/imagenes/CoronaSix.png" alt="">
+                </div>
+                <div class="contenido">
+                    <h3>Sixpack Corona</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="precio">$35.000 <span>$45.000</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconos">
+                    <a href="#" class="fas fa-shopping-cart agregar-carrito" data-nombre="Jack Daniels"
+                        data-precio="150000" data-img="../static/imagenes/JackDaniels.PNG"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="imagen">
+                    <img src="../static/imagenes/JackDaniels.PNG" alt="">
+                </div>
+                <div class="contenido">
+                    <h3>Jack Daniels</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="precio">$150.000 <span>$180.000</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconos">
+                    <a href="#" class="fas fa-shopping-cart agregar-carrito" data-nombre="Old Parr" data-precio="145000"
+                        data-img="../static/imagenes/OldParr.PNG"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="imagen">
+                    <img src="../static/imagenes/OldParr.PNG" alt="">
+                </div>
+                <div class="contenido">
+                    <h3>Old Parr</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="precio">$145.000 <span>$175.000</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="iconos">
+                    <a href="#" class="fas fa-shopping-cart agregar-carrito" data-nombre="Ron Medellin"
+                        data-precio="55000" data-img="../static/imagenes/RonMedellin.PNG"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="imagen">
+                    <img src="../static/imagenes/RonMedellin.PNG" alt="">
+                </div>
+                <div class="contenido">
+                    <h3>Ron Medellin</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="precio">$55.000 <span>$70.000</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+        <h1 class="titulo">Opiniones de <span>nuestros clientes</span></h1>
+        <div class="box-contenedor">
+            <div class="box">
+                <img src="../static/imagenes/quote.png" alt="" class="cita">
+                <p>Un lugar increíble para relajarse después del trabajo. La música siempre es perfecta y los cócteles
+                    son de primera. ¡Volveré seguro!</p>
+                <img src="../static/imagenes/perfil1.jpg" alt="" class="usuario">
+                <h3>Didier Drogba</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/quote.png" alt="" class="cita">
+                <p>The Booker combina un ambiente acogedor con atención de calidad. Cada visita es una experiencia
+                    distinta y divertida. ¡Mis amigos y yo lo recomendamos totalmente!</p>
+                <img src="../static/imagenes/perfil2.jpg" alt="" class="usuario">
+                <h3>Cristiano do Santos Aveiro</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="../static/imagenes/quote.png" alt="" class="cita">
+                <p>Me encanta venir aquí los fines de semana. La selección de bebidas es excelente, la música en vivo
+                    crea un ambiente único y siempre hay buena energía.</p>
+                <img src="../static/imagenes/perfil3.jpg" alt="" class="usuario">
+                <h3>Lionel Messi cuchitini</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h1 class="titulo">Conéctate <span>con nosotros</span></h1>
+        <div class="fila">
+            <iframe class="mapa"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.0889134691596!2d-75.38624682557849!3d6.507418523388028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e591568426c3071%3A0x72305b8ea3a3139f!2sTHE%20BOOMKER!5e0!3m2!1ses!2sco!4v1683052355674!5m2!1ses!2sco"
+                allowfullscreen="" loading="lazy"></iframe>
+
+            <form action="">
+                <h3>Contáctanos</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="tel" placeholder="Teléfono">
+                </div>
+                <input type="submit" value="Enviar mensaje" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <h1 class="titulo">Nuestro <span>blog</span></h1>
+        <div class="box-contenedor">
+            <div class="box">
+                <div class="imagen">
+                    <img src="../static/imagenes/coctelesHist.jpg" alt="" width="500px" height="500px">
+                </div>
+                <div class="contenido">
+                    <a href="#" class="titulo">Cócteles que cuentan historias</a>
+                    <span>por Victor / 1 de octubre, 2025</span>
+                    <p>Descubre cómo preparamos nuestros cócteles más emblemáticos y conoce los secretos detrás de cada
+                        sabor. En The Booker, cada bebida tiene su propia historia que vale la pena disfrutar.</p>
+                    <a href="#" class="btn">Leer más</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imagen">
+                    <img src="../static/imagenes/musicaVibr.jpg" alt="" width="500px" height="500px">
+                </div>
+                <div class="contenido">
+                    <a href="#" class="titulo">La música que hace vibrar a The Booker</a>
+                    <span>por Willmar / 22 de Nobiembre, 2014</span>
+                    <p>Desde jazz hasta los hits más actuales, la música en vivo transforma cada visita en una
+                        experiencia inolvidable. Conoce a nuestros artistas invitados y las noches que no te puedes
+                        perder</p>
+                    <a href="#" class="btn">Leer más</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imagen">
+                    <img src="../static/imagenes/disfrutarNoch.png" alt="" width="500px" height="500px">
+                </div>
+                <div class="contenido">
+                    <a href="#" class="titulo">Tips para disfrutar tu noche al máximo</a>
+                    <span>por Omar / 21 de Junio, 2018</span>
+                    <p>Aprende a combinar tus bebidas favoritas, disfrutar de nuestros aperitivos y aprovechar al máximo
+                        el ambiente de The Booker. Consejos prácticos para que cada salida sea única.</p>
+                    <a href="#" class="btn">Leer más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==== Modal Nequi ==== -->
+    <div class="modal-nequi" id="modal-nequi" aria-hidden="true" role="dialog" aria-labelledby="titulo-nequi">
+        <div class="modal-nequi-contenido" role="document">
+            <button class="cerrar-nequi" id="cerrar-nequi" aria-label="Cerrar">&times;</button>
+
+            <div class="logo-nequi">
+                <img src="../static/imagenes/nequi-logo.png" alt="Nequi" onerror="this.style.display='none'">
+            </div>
+
+            <h3 id="titulo-nequi">Pago con Nequi (simulado)</h3>
+
+            <p class="info-total">Total a pagar: <strong>$<span id="total-nequi">0.00</span></strong></p>
+
+            <label for="telefono-nequi" class="label-input">Número de teléfono</label>
+            <input id="telefono-nequi" type="tel" inputmode="numeric" placeholder="Ej: 3001234567 o +573001234567"
+                autocomplete="tel">
+
+            <label for="clave-nequi" class="label-input">Contraseña Nequi</label>
+            <div class="clave-wrap">
+                <input id="clave-nequi" type="password" placeholder="Ingresa tu contraseña"
+                    autocomplete="current-password">
+                <button type="button" id="toggle-clave" class="toggle-clave"
+                    aria-label="Mostrar contraseña">👁️</button>
+            </div>
+
+            <div class="nota-seguridad">Esto es una simulación. No uses contraseñas reales.</div>
+
+            <button id="btn-pagar-nequi" class="btn-nequi">Pagar</button>
+        </div>
+    </div>
+
+    <!-- ==== Modal Factura ==== -->
+    <div class="modal-factura" id="modal-factura" aria-hidden="true" role="dialog">
+        <div class="modal-factura-contenido">
+            <button class="cerrar-factura" id="btn-cerrar-factura" aria-label="Cerrar">&times;</button>
+            <h3 class="factura-titulo">Factura de Compra</h3>
+
+            <div class="factura-info">
+                <p><strong>Cliente:</strong> <span id="factura-cliente"></span></p>
+                <p><strong>Fecha:</strong> <span id="factura-fecha"></span></p>
+            </div>
+
+            <table class="tabla-factura">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="factura-items">
+                    <!-- Productos generados por JS -->
+                </tbody>
+            </table>
+
+            <p class="total-factura">Total: $<span id="factura-total">0.00</span></p>
+            <button id="btn-cerrar-factura2" class="btn-factura">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- ==== Modal Gráfico de Ventas ==== -->
+    <section class="modal-grafico" id="modal-grafico" aria-hidden="true" role="dialog">
+        <div id="seccion-graficos" class="contenedor-graficos">
+            <button id="cerrar-grafico" class="cerrar-grafico" aria-label="Cerrar">&times;</button>
+            <h2>Gráfico de Ventas</h2>
+            <img src="{{ url_for('static', filename='graficos/ventas.png') }}" alt="Gráfico de ventas">
+        </div>
+    </section>
+
+
+    <section class="footer">
+        <div class="share">
+
+            <div class="social-icons">
+                <a href="" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/the_boomker?igsh=Z3QxY3l5OWRoYjhw" target="_blank"
+                    class="fab fa-instagram"></a>
+                <a href="https://wa.me/573006481124" target="_blank" class="fab fa-whatsapp"></a>
+            </div>
+
+
+            <a href="{{ url_for('graficos')}}" class="boton footer-barra"> <i class="fa-solid fa-chart-simple"
+                    id="btn-ver-grafico"></i></a>
+
+
+        </div>
+
+        <div class="creditos"> &copy;Creado por <span>Arrieta, Torres, Rocha</span> | Todos los derechos reservados
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../static/js/main.js">
+    </script>
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    ScrollReveal({
+        reset: true,
+        diley: 300,
+        distance: '60px',
+        duration: 1500,
+    });
+
+    ScrollReveal().reveal('.titulo', {
+        delay: 400,
+        duration: 2500,
+    })
+    ScrollReveal().reveal(".contenido", {
+        delay: 600,
+        duration: 2500,
+    })
+
+    ScrollReveal().reveal('.imagen', {
+        origin: 'right',
+    })
+
+    ScrollReveal().reveal('.box', {
+        interval: 300,
+    })
+
+</script>
+
+</html>
