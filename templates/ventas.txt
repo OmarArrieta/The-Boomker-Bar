@@ -1,8 +1,0 @@
-Mojito Tropical,4
-Cóctel Frutos Rojos,4
-Ron Medellin,2
-Old Parr,3
-Jack Daniels,2
-Sixpack Corona,2
-Cerveza Rubia,1
-Whisky en las Rocas,1
